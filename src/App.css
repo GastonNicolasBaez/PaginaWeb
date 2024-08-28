@@ -19,6 +19,8 @@ html, body {
 
 main {
   flex: 1;
+  padding-bottom: 60px; /* Ajusta este valor según la altura del footer */
+ 
 }
 
 footer {

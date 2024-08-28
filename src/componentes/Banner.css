@@ -1,39 +1,29 @@
+/* src/componentes/Banner.css */
 .banner {
-  background-color: #0a1a2b !important;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.banner-title {
+    background-color: #242c4f!important;
+    padding-top: 20px; /* Espacio superior dentro del banner */
+    padding-bottom: 10px; /* Espacio inferior dentro del banner */
+  }
+  
+  .nav-links {
+    width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
+    justify-content: center; /* Centra horizontalmente los enlaces */
+  }
+  .banner-title {
+    color: white !important;
+  }
+ 
+  .navbar-nav .nav-link, 
+.navbar-nav .dropdown-toggle {
   color: white;
-  font-size: 24px;
-  font-weight: bold;
 }
-
-.nav-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-links .nav-link,
-.nav-links .dropdown-toggle {
-  margin-right: 20px;
-  color: white !important; /* Color de los enlaces con !important */
-}
-
-.nav-links .nav-link:hover,
-.nav-links .dropdown-toggle:hover {
-  color: white !important;
-}
-
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show .dropdown-toggle:hover{
-  flex-direction: row;
-  color: #dee2e6;
-}
-
-.banner-bot {
-  background-color: #0a1a2b !important;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 70px; /* Ajusta este valor según el tamaño del primer banner */
-}
+  .nav-links .nav-link, 
+  .nav-links .dropdown-toggle {
+    margin-right: 60px; /* Espacio entre los enlaces */
+    color: white; /* Color de los enlaces */
+  }
+  
+  .navbar-nav {
+    flex-direction: row; /* Coloca los enlaces en una fila */
+  }
+  

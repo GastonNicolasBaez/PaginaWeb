@@ -1,0 +1,10 @@
+/* src/componentes/CardSection.css */
+.card img {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Hace que la imagen sea cuadrada */
+  }
+  
+  .shadow-sm {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aplica un sombreado suave */
+  }
+  

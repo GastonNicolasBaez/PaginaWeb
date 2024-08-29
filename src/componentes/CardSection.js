@@ -13,8 +13,8 @@ const CardSection = () => {
     <Container>
       <Row className="my-4">
         <Col md={3} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image1} alt="Image 1" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
+          <Card className="border-light text-center align-items-center">
+            <Card.Img variant="top" src={image1} alt="Image 1" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block align-items-center" />
             <Card.Body>
               <Card.Text>
                 Some quick example text to build on the card title and make up the bulk of the card's content.

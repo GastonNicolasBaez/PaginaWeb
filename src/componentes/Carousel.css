@@ -1,6 +1,6 @@
 
 .custom-carousel {
-  padding-top: 800px;
+  padding-top: 1000px;
   width: 100%; /* Asegúrate de que el carrusel ocupe todo el ancho */
 }
 
@@ -8,3 +8,4 @@
   width: 100%; /* Asegura que la imagen ocupe todo el ancho del carrusel */
   height: auto; /* Mantiene la relación de aspecto de la imagen */
 }
+

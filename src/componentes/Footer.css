@@ -1,13 +1,56 @@
-/* src/components/Footer.css */
+/* src/componentes/Footer.css */
 .footer {
   width: 100%;
-  height: auto; /* Ajusta la altura automáticamente */
   background-color: #242c4f; /* Color de fondo del footer */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-family: 'Roboto', sans-serif;
-  position: fixed;
-  bottom: 0;
-  padding: 10px 0; /* Añade un poco de padding para mayor espacio */
+  padding: 20px 0; /* Aumenta el padding para hacer el footer más grande */
+  color: white; /* Color del texto del footer */
+  position: relative; /* Asegura que el footer no esté fijo */
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Espacio horizontal */
+}
+
+.footer-logo {
+  height: 80px;
+  width: 80px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 5px 0; /* Espacio entre líneas de texto */
+}
+
+.iconos-redes-sociales {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre los iconos */
+}
+
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 2rem; /* Aumenta el tamaño de los iconos si es necesario */
+  transition: color 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover i {
+  color: #ffcc00; /* Cambia el color del icono al pasar el ratón por encima */
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
 }

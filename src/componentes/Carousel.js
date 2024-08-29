@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
-const CarouselComponent = () => {
+const CarouselComponent = () => { 
   return (
     <Carousel id="carouselExampleInterval" interval={10000}>
       <Carousel.Item>

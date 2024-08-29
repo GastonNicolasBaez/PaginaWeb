@@ -1,8 +1,10 @@
+/* src/App.css */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa; /* Color de fondo gris claro */
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -20,19 +22,25 @@ html, body {
 main {
   flex: 1;
   padding-bottom: 60px; /* Ajusta este valor según la altura del footer */
- 
-}
-
-footer {
-  background-color: #0a1a2b; /* Color de fondo del footer */
-  padding: 10px 0;
-  text-align: center;
-  height: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
 .carousel-item img {
   height: 400px; /* Ajusta la altura de las imágenes del carrusel */
+}
+
+/* Asegura que el contenedor principal ocupe al menos la altura de la ventana */
+.app-container {
+  min-height: 100vh; /* 100% de la altura de la ventana */
+  display: flex;
+  flex-direction: column; /* Dispone los hijos verticalmente */
+}
+
+/* Hace que el contenido principal ocupe el espacio disponible */
+.main-content {
+  flex: 1; /* Flex grow para que el contenido principal crezca y empuje el footer hacia abajo */
+}
+
+/* Evita que las reglas generales afecten al footer */
+.footer {
+  margin: 0; /* Asegúrate de que no haya margen que interfiera */
 }

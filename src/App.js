@@ -6,6 +6,7 @@ import CardSection from './componentes/CardSection';
 import CardRow from './componentes/CardRow';
 import './App.css';
 
+
 const App = () => {
   return (
     <div className="App">
@@ -17,7 +18,7 @@ const App = () => {
       </main>
       <Footer />
     </div>
-  );
+  );  
 };
 
 export default App;

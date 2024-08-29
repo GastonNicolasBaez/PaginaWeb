@@ -1,29 +1,70 @@
 /* src/componentes/Banner.css */
 .banner {
-    background-color: #242c4f!important;
-    padding-top: 20px; /* Espacio superior dentro del banner */
-    padding-bottom: 10px; /* Espacio inferior dentro del banner */
-  }
-  
-  .nav-links {
-    width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
-    justify-content: center; /* Centra horizontalmente los enlaces */
-  }
-  .banner-title {
-    color: white !important;
-  }
- 
-  .navbar-nav .nav-link, 
-.navbar-nav .dropdown-toggle {
-  color: white;
+  background-color: #242c4f !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease; /* Transición más suave */
+  position: relative;
+  z-index: 1000;
 }
-  .nav-links .nav-link, 
-  .nav-links .dropdown-toggle {
-    margin-right: 60px; /* Espacio entre los enlaces */
-    color: white; /* Color de los enlaces */
-  }
-  
-  .navbar-nav {
-    flex-direction: row; /* Coloca los enlaces en una fila */
-  }
-  
+
+.banner.fixed {
+  position: fixed; /* Fija el banner en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row; /* Cambia la dirección a fila */
+  justify-content: space-between; /* Espacia entre título y enlaces */
+  padding: 10px 20px; /* Ajusta el padding cuando está fijo */
+}
+
+.banner-title {
+  color: white !important;
+  font-size: 2rem;
+  transition: all 0.5s ease; /* Transición más suave */
+  text-align: left;
+  margin-left: 20px; /* Mueve el título a la izquierda */
+}
+.banner-subtitle {
+  color: white;
+  font-size: 1rem; /* Tamaño del subtítulo */
+  margin-bottom: 10px; /* Espacio debajo del subtítulo */
+}
+.banner.fixed .banner-title {
+  font-size: 1.5rem; /* Reduce el tamaño del título */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease; /* Transición más suave */
+}
+
+.banner.fixed .nav-links {
+  justify-content: flex-end; /* Mueve los enlaces a la derecha */
+  margin-right: 20px; /* Añade margen a la derecha */
+}
+
+.nav-links .nav-link, 
+.nav-links .dropdown-toggle {
+  margin: 0 15px; /* Espacio uniforme entre enlaces */
+  color: white !important; /* Color de los enlaces */
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.nav-links .nav-link:hover,
+.nav-links .dropdown-toggle:hover,
+.nav-links .nav-link:active,
+.nav-links .dropdown-toggle:active,
+.nav-links .nav-link:focus,
+.nav-links .dropdown-toggle:focus {
+  color: white; /* Mantiene el color blanco al interactuar */
+  text-decoration: none; /* Mantiene el texto sin subrayado */
+}
+.navbar-nav {
+  flex-direction: row; /* Coloca los enlaces en una fila */
+}

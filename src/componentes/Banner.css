@@ -2,16 +2,30 @@
 .banner {
   background-color: #242c4f !important;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.5s ease; /* Transición más suave */
+  transition: all 0.5s ease;
   position: relative;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra al banner */
 }
 
+.banner-title a {
+  color: white; /* Color del texto blanco */
+  text-decoration: none; /* Quita el subrayado */
+}
+
+
+.banner-title a:visited, .banner-title a:active {
+  color: white; /* Mantiene el color blanco para enlaces visitados o activos */
+}
+
+.body-fixed-banner {
+  padding-top: 200px; /* Ajusta el valor según la altura de tu banner */
+}
 .banner.fixed {
   position: fixed; /* Fija el banner en la parte superior */
   top: 0;
@@ -20,20 +34,23 @@
   flex-direction: row; /* Cambia la dirección a fila */
   justify-content: space-between; /* Espacia entre título y enlaces */
   padding: 10px 20px; /* Ajusta el padding cuando está fijo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Sombra más intensa cuando el banner está fijo */
 }
 
 .banner-title {
   color: white !important;
   font-size: 2rem;
-  transition: all 0.5s ease; /* Transición más suave */
+  transition: all 0.5s ease;
   text-align: left;
-  margin-left: 20px; /* Mueve el título a la izquierda */
+  margin-left: 20px;
 }
+
 .banner-subtitle {
   color: white;
-  font-size: 1rem; /* Tamaño del subtítulo */
-  margin-bottom: 10px; /* Espacio debajo del subtítulo */
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
+
 .banner.fixed .banner-title {
   font-size: 1.5rem; /* Reduce el tamaño del título */
 }
@@ -41,19 +58,19 @@
 .nav-links {
   display: flex;
   justify-content: center;
-  transition: all 0.5s ease; /* Transición más suave */
+  transition: all 0.5s ease;
 }
 
 .banner.fixed .nav-links {
   justify-content: flex-end; /* Mueve los enlaces a la derecha */
-  margin-right: 20px; /* Añade margen a la derecha */
+  margin-right: 20px;
 }
 
 .nav-links .nav-link, 
 .nav-links .dropdown-toggle {
-  margin: 0 15px; /* Espacio uniforme entre enlaces */
-  color: white !important; /* Color de los enlaces */
-  text-decoration: none; /* Quita el subrayado */
+  margin: 0 15px;
+  color: white !important;
+  text-decoration: none;
 }
 
 .nav-links .nav-link:hover,
@@ -62,9 +79,10 @@
 .nav-links .dropdown-toggle:active,
 .nav-links .nav-link:focus,
 .nav-links .dropdown-toggle:focus {
-  color: white; /* Mantiene el color blanco al interactuar */
-  text-decoration: none; /* Mantiene el texto sin subrayado */
+  color: white;
+  text-decoration: none;
 }
+
 .navbar-nav {
   flex-direction: row; /* Coloca los enlaces en una fila */
 }

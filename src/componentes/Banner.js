@@ -6,8 +6,8 @@ const Banner = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {  
-      if (window.scrollY > 50) { // Ajusta el valor según cuándo quieras que se active el efecto
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -15,16 +15,37 @@ const Banner = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  useEffect(() => {
+    if (isScrolled) {
+      document.body.classList.add('body-fixed-banner');
+    } else {
+      document.body.classList.remove('body-fixed-banner');
+    }
+  }, [isScrolled]);
+
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 100,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <header className={`banner ${isScrolled ? 'fixed' : ''}`}>
       <div className="banner-title">
-        Hospital Naval Puerto Belgrano
+        <a href="#top" onClick={(e) => handleScroll(e, 'top')}>
+          Hospital Naval Puerto Belgrano
+        </a>
       </div>
       <div className="banner-subtitle">
         Armada Argentina
@@ -33,7 +54,7 @@ const Banner = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-links">
-            <Nav.Link href="#home">Inicio</Nav.Link>
+            {/* Elimina el Nav.Link de Inicio */}
             <NavDropdown title="Nuestro Hospital" id="hospital-dropdown">
               <NavDropdown.Item href="#service3">Servicios Médicos</NavDropdown.Item>
               <NavDropdown.Item href="#service1">Acerca del HNPB</NavDropdown.Item>
@@ -46,13 +67,16 @@ const Banner = () => {
               <NavDropdown.Item href="#service2">Resultados de Laboratorio</NavDropdown.Item>
               <NavDropdown.Item href="#service4">Informes Rayos</NavDropdown.Item>
               <NavDropdown.Item href="#service5">Historia Clinica</NavDropdown.Item>
-            </NavDropdown>  
+            </NavDropdown>
             <NavDropdown title="Profesionales" id="doctors-dropdown">
               <NavDropdown.Item href="#service1">RX Profesionales</NavDropdown.Item>
               <NavDropdown.Item href="#service2">Control de Gestion</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#telefonos-utiles">Telefonos Utiles</Nav.Link>
             <Nav.Link href="#footer">Contacto</Nav.Link>
+            <Nav.Link href="#faq" onClick={(e) => handleScroll(e, 'faq')}>
+              FAQ
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

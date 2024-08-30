@@ -1,4 +1,3 @@
-/* src/App.css */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa; /* Color de fondo gris claro */
@@ -7,6 +6,9 @@ body {
   overflow-x: hidden;
 }
 
+#top {
+  padding-top: 0px;
+}
 html, body {
   height: 100%;
   margin: 0;
@@ -43,4 +45,41 @@ main {
 /* Evita que las reglas generales afecten al footer */
 .footer {
   margin: 0; /* Asegúrate de que no haya margen que interfiera */
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 100px 0; /* Aumenta el margen para más espacio */
+  font-size: 25px;
+}
+
+/* Estilos adicionales para el banner */
+body-fixed-banner main {
+  padding-top: 100px; /* Ajusta este valor según la altura del banner */
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid #dee2e6; /* Color y grosor de la línea */
+}
+
+.separator::before {
+  margin-right: 10px;
+}
+
+.separator::after {
+  margin-left: 10px;
+}
+
+.separator span {
+  padding: 0 50px; /* Espacio alrededor del texto */
+}
+
+#faq {
+  padding-top: 100px; /* Ajusta este valor según la altura del banner */
+  margin-top: -100px; /* Ajusta este valor para compensar el padding */
 }

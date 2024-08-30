@@ -3,22 +3,34 @@ import Banner from './componentes/Banner';
 import CarouselComponent from './componentes/Carousel';
 import Footer from './componentes/Footer';
 import CardSection from './componentes/CardSection';
-import CardRow from './componentes/CardRow';
+import CardRow from './componentes/CardGroup';
+import Acordion from './componentes/Acordeon';
+import CarouselComponent2 from './componentes/Autoridades';
 import './App.css';
-
 
 const App = () => {
   return (
-    <div className="App">
+    <div id="top" className="App"> {/* Agrega el ID "top" aquí */}
       <Banner />
-      <main style={{ marginTop: '0px' }}> {/* Ajusta el margen superior para el banner fijo */}
+      <main style={{ marginTop: '0px' }}>
         <CarouselComponent />
-        <CardSection />  {/* Agrega la sección de cards aquí */}
-        <CardRow />    {/*agrega la seccion de cards */}
+        <CardSection />
+        <div id="novedades" className="separator">
+          <span className="text-center">Novedades</span>
+        </div>
+        <CardRow />
+        <div id="autoridades" className="separator">
+          <span className="text-center">Autoridades</span>
+        </div>
+        <CarouselComponent2 />
+        <div id="faq" className="separator">
+          <span className="text-center">Preguntas Frecuentes</span>
+        </div>
+        <Acordion />
       </main>
       <Footer />
     </div>
-  );  
+  );
 };
 
 export default App;

@@ -1,6 +1,5 @@
-
 .custom-carousel {
-  padding-top: 1000px;
+  margin-top: 20px; /* Añade un margen superior más razonable */
   width: 100%; /* Asegúrate de que el carrusel ocupe todo el ancho */
 }
 
@@ -9,3 +8,11 @@
   height: auto; /* Mantiene la relación de aspecto de la imagen */
 }
 
+.carousel .carousel-item {
+  transition: transform 0.5s ease; /* Suaviza la transición entre slides */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+  height: 500px; /* Establece una altura fija si lo deseas */
+}

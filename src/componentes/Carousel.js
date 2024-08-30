@@ -1,5 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import image1 from '../assets/images/SliderErgo.jpg';
+import image2 from '../assets/images/SliderLabo.jpg';
+import image3 from '../assets/images/SliderRX.jpg';
+
 
 const CarouselComponent = () => { 
   return (
@@ -7,21 +11,21 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400?text=Image+1"
+          src={image1}
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item interval={2000}>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400?text=Image+2"
+          src={image2}
           alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400?text=Image+3"
+          src={image3}
           alt="Third slide"
         />
       </Carousel.Item>

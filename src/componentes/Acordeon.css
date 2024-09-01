@@ -9,7 +9,7 @@
   }
   
   /* Eliminar el borde y el cambio de color al hacer clic en el encabezado del acordeón */
-  .accordion-button {
+  .accordion-button  {
     background-color: transparent; /* Fondo transparente */
     color: #000; /* Color del texto del encabezado */
     border: none; /* Elimina el borde por defecto */
@@ -33,7 +33,10 @@
   
   /* Estilo para el contenedor del acordeón */
   .accordion-item {
-    border: 1px solid #ccc; /* Borde alrededor del ítem del acordeón */
+    /* Borde alrededor del ítem del acordeón */
     margin-bottom: 10px; /* Espacio entre ítems del acordeón */
+    /* Estilo para el borde alrededor del ítem del acordeón**/
+    border: 1px solid #ccc; /* Borde gris claro**/
+    border-radius: 5px; /* Bordes redondeados**/
   }
   

@@ -7,6 +7,7 @@ import CardRow from './componentes/CardGroup';
 import Acordeon from './componentes/Acordeon';
 import CarouselAutoridades from './componentes/Autoridades';
 import './App.css';
+import 'animate.css';
 
 const throttle = (func, limit) => {
   let lastFunc;

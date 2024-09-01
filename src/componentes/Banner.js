@@ -78,10 +78,11 @@ const Banner = () => {
               <NavDropdown.Item href="#service2">Control de Gestion</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#telefonos-utiles">Telefonos Utiles</Nav.Link>
-            <Nav.Link href="#footer">Contacto</Nav.Link>
-            <Nav.Link href="#faq" onClick={(e) => handleScroll(e, 'faq')}>
+             <Nav.Link href="#faq" onClick={(e) => handleScroll(e, 'faq')}>
               FAQ
             </Nav.Link>
+            <Nav.Link href="#footer">Contacto</Nav.Link>
+           
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -1,42 +1,52 @@
-  .card {
+
+    .group-example .card {
       width: 18rem; /* Ajusta el ancho de la tarjeta */
       margin: auto; /* Centra la tarjeta dentro del contenedor */
       background-color: #343a40; /* Ajusta el color de fondo de la tarjeta si es necesario */
+      opacity: 0; /* Ocultar inicialmente */
+      transition: opacity 0.5s ease-out; /* Transición suave de opacidad */
+      position: relative; /* Asegura que las tarjetas se comporten correctamente en la animación */
     }
     
-    .card-img-top {
+    .group-example .card.animate__animated.animate__fadeInUp {
+      opacity: 1; /* Mostrar cuando la animación esté activa */
+    }
+    
+    .group-example .card-img-top {
       height: 12rem; /* Ajusta la altura de la imagen */
       object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+      width: 100%; /* Asegura que las imágenes se ajusten al contenedor de la tarjeta */
+      border-radius: 0;
     }
     
-    .card-body {
+    .group-example .card-body {
       padding: 1rem; /* Ajusta el padding interno del cuerpo de la tarjeta */
     }
     
-    .card-title {
+    .group-example .card-title {
       font-size: 1.2rem; /* Ajusta el tamaño de la fuente del título */
     }
     
-    .card-text {
+    .group-example .card-text {
       font-size: 0.9rem; /* Ajusta el tamaño de la fuente del texto */
       padding: 0.5rem 0; /* Ajusta el padding del texto */
     }
     
-    .card:hover {
+    .group-example .card:hover {
       box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
       transition: all 0.7s linear;
     }
     
-    .card-img-top {
+    .group-example .card-img-top {
       transform: scale(1);
       transition: all 0.2s ease-in-out;
     }
     
-    .card-img-top:hover {
+    .group-example .card-img-top:hover {
       transform: scale(1.8);
     }
     
-    .overflow {
+    .group-example .overflow {
       overflow: hidden;
     }
     

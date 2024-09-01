@@ -7,13 +7,16 @@ import './Autoridades.css'; // Asegúrate de importar el archivo CSS
 function AutoridadesIMG({ text }) {
   let imageSrc;
   switch (text) {
-    case 'First slide':
+    case 'Primer slide':
       imageSrc = image1;
       break;
-    case 'Second slide':
+    case 'Segundo slide':
       imageSrc = image2;
       break;
-    case 'Third slide':
+    case 'Tercer slide':
+      imageSrc = image3;
+      break;
+    case 'Cuarto slide':
       imageSrc = image3;
       break;
     default:

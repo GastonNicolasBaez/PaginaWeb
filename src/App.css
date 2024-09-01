@@ -65,9 +65,10 @@ html, body {
   will-change: transform;
 }
 .parallax-container {
-  position: static;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Añade la sombra aquí */
+  z-index: 1; /* Asegura que el contenedor tenga un nivel de apilamiento adecuado */
 }
-
 
 /* Estilo para las secciones donde se mostrará el parallax */
 .parallax-visible {
@@ -129,7 +130,7 @@ body-fixed-banner main {
 
 .faq-section .preguntas-frec {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 /* Estilo para el recuadro alrededor del texto */
@@ -236,12 +237,12 @@ body-fixed-banner main {
   }
 
   .faq-section .preguntas-frec {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 60px;
   }
 
   .accordion-container {
-    padding: 0 25px;
+    padding: 0 7px;
   }
 
   .faq-section .accordion-container {
@@ -277,7 +278,7 @@ body-fixed-banner main {
 
   .faq-section .accordion-container {
     display: block;
-    width: 100%;
-    padding: 0 10px;
+    width: 110%;
+    padding: 0 0;
   }
 }

@@ -27,7 +27,7 @@ function CarouselAutoridades() {
       >
         <Carousel.Item>
           <div className="carousel-item-content">
-            <AutoridadesIMG text="First slide" />
+            <AutoridadesIMG text="Primer slide" />
           </div>
           {slideIndex === 0 && (
             <div className={`carousel-caption-below ${captionClass}`}>
@@ -38,23 +38,34 @@ function CarouselAutoridades() {
         </Carousel.Item>
         <Carousel.Item>
           <div className="carousel-item-content">
-            <AutoridadesIMG text="Second slide" />
+            <AutoridadesIMG text="Segundo slide" />
           </div>
           {slideIndex === 1 && (
             <div className={`carousel-caption-below ${captionClass}`}>
-              <h3>Subdirector Administrativo</h3>
-              <p>CFCO BARCHUK RAMON SECUNDINO.</p>
+              <h3>Subdirector Operativo</h3>
+              <p>CNIM BERTERREIX FACUNDO.</p>
             </div>
           )}
         </Carousel.Item>
         <Carousel.Item>
           <div className="carousel-item-content">
-            <AutoridadesIMG text="Third slide" />
+            <AutoridadesIMG text="Tercer slide" />
           </div>
           {slideIndex === 2 && (
             <div className={`carousel-caption-below ${captionClass}`}>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3>Subdirector Asistencial</h3>
+              <p>CNME ROSALES EDUARDO ANDRES.</p>
+            </div>
+          )}
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="carousel-item-content">
+            <AutoridadesIMG text="Cuarto slide" />
+          </div>
+          {slideIndex === 3 && (
+            <div className={`carousel-caption-below ${captionClass}`}>
+              <h3>Subdirector Administrativo</h3>
+              <p>CFCO BARCHUK RAMON SECUNDINO.</p>
             </div>
           )}
         </Carousel.Item>

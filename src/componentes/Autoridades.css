@@ -1,59 +1,82 @@
 .custom-fade-carousel {
-    max-width: 80%;
-    margin: auto;
-    height: 300px; /* Ajusta la altura para mantener la proporción deseada */
+  max-width: 80%;
+  margin: auto;
+}
+
+.carousel-component2-container {
+  margin-bottom: 50px; /* Ajusta según el espacio que necesites */
+}
+
+.carousel-item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Altura del carrusel, ajusta según sea necesario */
+}
+
+.carousel-caption-below {
+  text-align: center;
+  margin-top: 15px; /* Añade espacio entre la imagen y la leyenda */
+}
+
+.image-container {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Define las animaciones para el efecto de fade in y fade out
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Agrega un margen inferior al componente CarouselComponent2 */
-  .carousel-component2-container {  
-    margin-bottom: 230px; /* Ajusta el valor según el espacio necesario */
+  to {
+    opacity: 1;
   }
-  
-  /* Envuelve el contenido del carrusel para controlar la posición de la leyenda */
-  .carousel-item-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  /* Estilo para los ítems del carrusel */
-  .custom-fade-carousel .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Asegura que el ítem ocupe toda la altura del carrusel */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+  to {
+    opacity: 0;
   }
-  
-  .custom-fade-carousel .carousel-item img {
-    height: 100%; /* Ajusta la altura del contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
-    border-radius: 50%; /* Hace la imagen circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra alrededor de la imagen */
-  }
-  
-  /* Estilo para el contenedor de la imagen */
-  .image-container {
-    width: 400px; /* Ajusta el tamaño del contenedor */
-    height: 400px; /* Ajusta el tamaño del contenedor */
-    border-radius: 50%; /* Redondea el contenedor para que sea un círculo */
-    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-  }
-  
-  /* Estilo para las imágenes dentro del contenedor */
-  .image-container img {
-    width: 100%; /* Ajusta el tamaño de la imagen para que cubra el contenedor */
-    height: 100%; /* Ajusta el tamaño de la imagen para que cubra el contenedor */
-    object-fit: cover; /* Ajusta la imagen para que cubra el área del contenedor sin distorsionarse */
-  }
-  
-  /* Estilo para la leyenda del carrusel */
-  .carousel-caption {
-    text-align: center;
-    padding: 1rem;
-  }
-  
+} */
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+
+/* Aplica la animación de fade in y fade out a los captions */
+.carousel-caption-below {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.carousel-caption-below.fade-in {
+  animation-name: fadeIn;
+}
+
+.carousel-caption-below.fade-out {
+  animation-name: fadeOut;
+}
+

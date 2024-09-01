@@ -1,19 +1,18 @@
+/* Estilos generales */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa; /* Color de fondo gris claro */
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  margin: 0; /* Agrego margin: 0 para evitar conflictos */
 }
 
-#top {
-  padding-top: 0px;
-}
 html, body {
   height: 100%;
-  margin: 0;
 }
 
+/* Estilo para el contenedor principal de la aplicación */
 .App {
   flex: 1; /* Se expande para llenar el espacio disponible */
   display: flex;
@@ -21,11 +20,7 @@ html, body {
   justify-content: space-between;
 }
 
-main {
-  flex: 1;
-  padding-bottom: 60px; /* Ajusta este valor según la altura del footer */
-}
-
+/* Estilos para el carrusel */
 .carousel-item img {
   height: 400px; /* Ajusta la altura de las imágenes del carrusel */
 }
@@ -35,6 +30,7 @@ main {
   min-height: 100vh; /* 100% de la altura de la ventana */
   display: flex;
   flex-direction: column; /* Dispone los hijos verticalmente */
+  box-sizing: border-box; /* Agrego box-sizing para evitar problemas de cálculo */
 }
 
 /* Hace que el contenido principal ocupe el espacio disponible */
@@ -42,17 +38,58 @@ main {
   flex: 1; /* Flex grow para que el contenido principal crezca y empuje el footer hacia abajo */
 }
 
-/* Evita que las reglas generales afecten al footer */
-.footer {
-  margin: 0; /* Asegúrate de que no haya margen que interfiera */
+.parallax {
+  background-image: url('./assets/images/Barquito.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 800px; /* Ajusta la altura según sea necesario */
+  position: static;
 }
+
+
+
+.parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: translateZ(0);
+  will-change: transform;
+}
+.parallax-container {
+  position: static;
+}
+
+
+/* Estilo para las secciones donde se mostrará el parallax */
+.parallax-visible {
+  background-color: transparent; /* Asegura que la imagen de fondo sea visible */
+}
+
+/* Estilo para las secciones con fondo sólido */
+.card-section-bg,
+.separator {
+  padding: 20px;
+}
+
 
 .separator {
   display: flex;
   align-items: center;
+  margin-bottom: 0px; /* Asegura que no haya margen inferior en los separadores */
+  padding-top: 50px;
   text-align: center;
   margin: 100px 0; /* Aumenta el margen para más espacio */
-  font-size: 25px;
+  font-size: 30px;
+
 }
 
 /* Estilos adicionales para el banner */
@@ -64,7 +101,7 @@ body-fixed-banner main {
 .separator::after {
   content: '';
   flex: 1;
-  border-top: 1px solid #dee2e6; /* Color y grosor de la línea */
+  border-top: 3px solid #b5c1ce; /* Color y grosor de la línea */
 }
 
 .separator::before {
@@ -79,7 +116,168 @@ body-fixed-banner main {
   padding: 0 50px; /* Espacio alrededor del texto */
 }
 
-#faq {
-  padding-top: 100px; /* Ajusta este valor según la altura del banner */
-  margin-top: -100px; /* Ajusta este valor para compensar el padding */
+/* Ajustes para la sección FAQ */
+.faq-section {
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accordion-container {
+  width: 100%;
+}
+
+.faq-section .preguntas-frec {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Estilo para el recuadro alrededor del texto */
+.highlighted-label {
+  display: inline-block; /* Asegura que el recuadro se ajuste al contenido */
+  padding: 10px 20px; /* Espacio interno alrededor del texto */
+  border: 2px solid #d4af37; /* Borde dorado sutil */
+  background-color: #242c4f; /* Fondo azul oscuro */
+  color: #fff; /* Color del texto blanco */
+  font-size: 1.5rem; /* Tamaño de fuente ajustado */
+  font-weight: bold; /* Negrita para destacar el texto */
+  text-align: center; /* Centra el texto dentro del recuadro */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+/* Estilos para el footer */
+.footer {
+  width: 100%;
+  background-color: #242c4f; /* Color de fondo del footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; /* Espacio alrededor del contenido del footer */
+  color: white; /* Color del texto del footer */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho del contenido */
+  padding: 0 20px; /* Espacio horizontal */
+}
+
+.footer-logo {
+  height: 250px; /* Tamaño de la imagen */
+  width: 250px; /* Tamaño de la imagen */
+  object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+  margin-right: 20px; /* Espacio a la derecha del logo */
+}
+
+.footer-left {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y los datos de contacto */
+}
+
+.contact-info {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 0.9rem; /* Tamaño del texto de contacto */
+}
+
+.contact-info p {
+  margin: 5px 0; /* Espacio entre líneas de texto */
+}
+
+.iconos-redes-sociales {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre los iconos */
+}
+
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 2rem; /* Tamaño de los iconos */
+  transition: color 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover i {
+  color: #ffcc00; /* Cambia el color del icono al pasar el ratón por encima */
+}
+
+.footer-texto {
+  font-size: 0.9rem; /* Tamaño del texto del copyright */
+  text-align: center;
+  padding: 10px 0; /* Espacio alrededor del texto */
+  margin: 0; /* Elimina el margen adicional */
+}
+
+/* Media queries para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer-texto {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto en pantallas medianas */
+  }
+
+  .app-container {
+    flex-direction: column;
+  }
+  .main-content {
+    flex: 1;
+  }
+  .footer {
+    margin-top: 50px;
+  }
+  .faq-section {
+    text-align: center;
+  }
+
+  .faq-section .preguntas-frec {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+  }
+
+  .accordion-container {
+    padding: 0 25px;
+  }
+
+  .faq-section .accordion-container {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-texto {
+    font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas móviles */
+  }
+
+  .separator {
+    margin: 50px 0;
+  }
+  .separator span {
+    padding: 0 20px;
+  }
+  .faq-section {
+    text-align: center;
+  }
+
+  .faq-section .preguntas-frec {
+    margin-bottom: 10px;
+  }
+
+  .faq-section .accordion-container {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+  }
 }

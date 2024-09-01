@@ -1,4 +1,3 @@
-// AutoridadesImg.js
 import React from 'react';
 import image1 from '../assets/images/IBANEZ.jpg';
 import image2 from '../assets/images/BARCHUCK.jpg';
@@ -6,7 +5,6 @@ import image3 from '../assets/images/IBANEZ.jpg';
 import './Autoridades.css'; // Asegúrate de importar el archivo CSS
 
 function AutoridadesIMG({ text }) {
-  // Determina la imagen a mostrar según el texto
   let imageSrc;
   switch (text) {
     case 'First slide':
@@ -30,4 +28,3 @@ function AutoridadesIMG({ text }) {
 }
 
 export default AutoridadesIMG;
-

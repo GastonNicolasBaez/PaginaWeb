@@ -38,7 +38,7 @@ function GroupExample() {
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This card has even longer content than the
             first to show that equal height action.
-          </Card.Text>
+          </Card.Text>z
         </Card.Body>
       </Card>
     </CardGroup>

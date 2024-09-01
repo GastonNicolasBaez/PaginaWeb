@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import logo from '../assets/images/LogoHNPB.png'; // Asegúrate de poner la ruta correcta a tu logo
 import './Banner.css';
 
 const Banner = () => {
@@ -34,7 +35,7 @@ const Banner = () => {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 100,
+        top: targetElement.offsetTop - 100, // Ajusta el valor si es necesario
         behavior: 'smooth',
       });
     }
@@ -42,19 +43,23 @@ const Banner = () => {
 
   return (
     <header className={`banner ${isScrolled ? 'fixed' : ''}`}>
-      <div className="banner-title">
-        <a href="#top" onClick={(e) => handleScroll(e, 'top')}>
-          Hospital Naval Puerto Belgrano
-        </a>
-      </div>
-      <div className="banner-subtitle">
-        Armada Argentina
+      <div className={`banner-content ${isScrolled ? 'shrink' : ''}`}>
+        <img src={logo} alt="Hospital Naval Puerto Belgrano Logo" className="banner-logo" />
+        <div className="banner-text">
+          <div className={`banner-title ${isScrolled ? 'hide' : ''}`}>
+            <a href="#top" onClick={(e) => handleScroll(e, 'top')}>
+              Hospital Naval Puerto Belgrano
+            </a>
+          </div>
+          <div className={`banner-subtitle ${isScrolled ? 'hide' : ''}`}>
+            Armada Argentina
+          </div>
+        </div>
       </div>
       <Navbar expand="lg" className="justify-content-center">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-links">
-            {/* Elimina el Nav.Link de Inicio */}
             <NavDropdown title="Nuestro Hospital" id="hospital-dropdown">
               <NavDropdown.Item href="#service3">Servicios Médicos</NavDropdown.Item>
               <NavDropdown.Item href="#service1">Acerca del HNPB</NavDropdown.Item>

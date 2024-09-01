@@ -1,4 +1,3 @@
-/* src/componentes/Banner.css */
 .banner {
   background-color: #242c4f !important;
   padding-top: 20px;
@@ -7,17 +6,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.5s ease;
   position: relative;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra al banner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between; /* Espacia el logo y el contenido del banner */
+  padding: 0 20px; /* Espacio horizontal dentro del banner */
+}
+
+.banner-logo {
+  height: 80px; /* Ajusta el tamaño del logo */
+  margin-left: auto; /* Empuja el logo hacia la derecha */
+}
+
+.banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .banner-title a {
   color: white; /* Color del texto blanco */
   text-decoration: none; /* Quita el subrayado */
 }
-
 
 .banner-title a:visited, .banner-title a:active {
   color: white; /* Mantiene el color blanco para enlaces visitados o activos */
@@ -26,23 +44,33 @@
 .body-fixed-banner {
   padding-top: 200px; /* Ajusta el valor según la altura de tu banner */
 }
+
 .banner.fixed {
   position: fixed; /* Fija el banner en la parte superior */
   top: 0;
   left: 0;
   width: 100%;
   flex-direction: row; /* Cambia la dirección a fila */
-  justify-content: space-between; /* Espacia entre título y enlaces */
+  justify-content: space-between; /* Espacia entre el logo y el contenido del banner */
   padding: 10px 20px; /* Ajusta el padding cuando está fijo */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Sombra más intensa cuando el banner está fijo */
+}
+
+.banner.fixed .banner-text {
+  display: flex;
+  flex-direction: column; /* Mantiene el texto en columna cuando el banner está fijo */
+  align-items: center; /* Centra el texto horizontalmente */
+}
+
+.banner.fixed .banner-logo {
+  height: 60px; /* Ajusta el tamaño del logo cuando el banner está fijo */
+  margin-left: auto; /* Alinea el logo a la derecha */
 }
 
 .banner-title {
   color: white !important;
   font-size: 2rem;
   transition: all 0.5s ease;
-  text-align: left;
-  margin-left: 20px;
 }
 
 .banner-subtitle {
@@ -52,7 +80,11 @@
 }
 
 .banner.fixed .banner-title {
-  font-size: 1.5rem; /* Reduce el tamaño del título */
+  font-size: 1.5rem; /* Reduce el tamaño del título cuando el banner está fijo */
+}
+
+.banner.fixed .banner-subtitle {
+  display: none; /* Oculta el subtítulo cuando está fijo */
 }
 
 .nav-links {
@@ -62,7 +94,7 @@
 }
 
 .banner.fixed .nav-links {
-  justify-content: flex-end; /* Mueve los enlaces a la derecha */
+  justify-content: flex-end; /* Mueve los enlaces a la derecha cuando el banner está fijo */
   margin-right: 20px;
 }
 
@@ -84,5 +116,6 @@
 }
 
 .navbar-nav {
+  font-size: 16px;
   flex-direction: row; /* Coloca los enlaces en una fila */
 }

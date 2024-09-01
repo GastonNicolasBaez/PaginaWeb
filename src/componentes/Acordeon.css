@@ -1,0 +1,39 @@
+/* Estilo para el cuerpo del acordeón siempre */
+.accordion-body {
+    font-size: 17px; /* Tamaño de fuente fijo para el cuerpo del acordeón */
+  }
+  
+  /* Estilo para los encabezados del acordeón */
+  .accordion-header {
+    font-size: 19px; /* Tamaño de fuente para el encabezado del acordeón */
+  }
+  
+  /* Eliminar el borde y el cambio de color al hacer clic en el encabezado del acordeón */
+  .accordion-button {
+    background-color: transparent; /* Fondo transparente */
+    color: #000; /* Color del texto del encabezado */
+    border: none; /* Elimina el borde por defecto */
+    box-shadow: none; /* Elimina la sombra alrededor del encabezado */
+  }
+  
+  /* Mantener el fondo y el borde transparente cuando el acordeón está expandido */
+  .accordion-button:not(.collapsed) {
+    background-color: transparent; /* Fondo transparente cuando está expandido */
+    color: #000; /* Color del texto del encabezado */
+    box-shadow: none; /* Elimina la sombra alrededor del encabezado */
+    border: none; /* Elimina el borde alrededor del encabezado expandido */
+  }
+  
+  /* Eliminar el cambio de color al pasar el ratón por encima */
+  .accordion-button:hover {
+    background-color: transparent; /* Fondo transparente al pasar el ratón */
+    color: #000; /* Color del texto del encabezado */
+    border: none; /* Elimina el borde al pasar el ratón */
+  }
+  
+  /* Estilo para el contenedor del acordeón */
+  .accordion-item {
+    border: 1px solid #ccc; /* Borde alrededor del ítem del acordeón */
+    margin-bottom: 10px; /* Espacio entre ítems del acordeón */
+  }
+  

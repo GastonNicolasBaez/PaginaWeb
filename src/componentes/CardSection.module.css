@@ -1,14 +1,24 @@
 /* src/componentes/CardSection.css */
 
+.card {
+  background-color: #f8f9fa !important; /* Cambia el fondo de la tarjeta */
+  padding: 20px;
+  border: none !important;
+}
+
 .card img {
   width: 150px; /* Ajusta el tamaño de la imagen */
   height: 150px; /* Hace que la imagen sea cuadrada */
-  border-radius: 50%; /* Mantiene las imágenes redondeadas */
+  border-radius: 50%; /* Mantiene las imágenes redondeadas */ 
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aplica el sombreado */
+  background-color: #f8f9fa; /* Asegura que el fondo alrededor de la imagen tenga el mismo color */
+  padding: 10px; /* Añade un padding para ver el fondo de la tarjeta alrededor de la imagen */
+  position: sticky;
 }
 
+
 .card-body {
-  background-color: #fdfdfd; /* Color de fondo del cuerpo de la tarjeta */
+  background-color: #f8f9fa; /* Color de fondo del cuerpo de la tarjeta */
   padding: 20px; /* Espaciado interno */
 }
 

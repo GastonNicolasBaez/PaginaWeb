@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa; /* Color de fondo gris claro */
+  background-color: #f8f9fa !important; /* Color de fondo gris claro */
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -22,7 +22,7 @@ html, body {
 
 /* Estilos para el carrusel */
 .carousel-item img {
-  height: 400px; /* Ajusta la altura de las imágenes del carrusel */
+  height: 485px; /* Ajusta la altura de las imágenes del carrusel */
 }
 
 /* Asegura que el contenedor principal ocupe al menos la altura de la ventana */
@@ -141,7 +141,7 @@ body-fixed-banner main {
   background-color: #242c4f; /* Fondo azul oscuro */
   color: #fff; /* Color del texto blanco */
   font-size: 1.5rem; /* Tamaño de fuente ajustado */
-  font-weight: bold; /* Negrita para destacar el texto */
+   /* Negrita para destacar el texto */
   text-align: center; /* Centra el texto dentro del recuadro */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
 }

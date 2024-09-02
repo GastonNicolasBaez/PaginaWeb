@@ -1,89 +1,173 @@
-/* src/componentes/Footer.css */
 .footer {
   width: 100%;
-  background-color: #242c4f; /* Color de fondo del footer */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0; /* Espacio alrededor del contenido del footer */
-  color: white; /* Color del texto del footer */
-  box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
-  position: relative;
+  background-color: #242c4f;
+  color: white;
+  box-sizing: border-box;
 }
 
-.footer-content {
+.footer-top {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  padding: 40px;
+  gap: 150px;
+}
+
+.map-container {
+  flex: 1;
+  max-width: 900px;
+  width: 900px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-container iframe {
   width: 100%;
-  max-width: 1200px; /* Limita el ancho del contenido */
-  padding: 0 20px; /* Espacio horizontal */
-}
-
-.footer-logo {
-  height: 250px; /* Tamaño de la imagen */
-  width: 250px; /* Tamaño de la imagen */
-  object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
-  margin-right: 20px; /* Espacio a la derecha del logo */
-}
-
-.footer-left {
-  display: flex;
-  align-items: center; /* Alinea verticalmente el logo y los datos de contacto */
+  height: 100%;
+  border: 0;
+  border-radius: 15px;
 }
 
 .contact-info {
-  text-align: left; /* Alinea el texto a la izquierda */
-  font-size: 0.9rem; /* Tamaño del texto de contacto */
+  margin-top: 50px;
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
-.contact-info p {
-  margin: 5px 0; /* Espacio entre líneas de texto */
+.footer-bottom {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  padding: 20px 50px;
+  gap: 20px; /* Reduce el espacio entre elementos */
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Alinea el logo a la izquierda */
+  margin-left: -80px; /* Mueve la imagen más a la izquierda */
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+}
+
+.footer-center {
+  flex: 2;
+  display: flex;
+  justify-content: center; /* Mantiene los enlaces centrados */
+  align-items: center;
+  text-align: center;
+}
+
+.footer-links ul {
+  display: flex; /* Hace que los enlaces se muestren en una sola línea */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px; /* Espacio entre los enlaces */
+}
+
+.footer-links a {
+  color: white; /* Cambia el color del texto a blanco */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Añade subrayado solo al pasar el cursor por encima */
+  color: #ffcc00; /* Cambia el color al pasar el cursor (opcional) */
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Alinea las redes sociales a la derecha */
+  align-items: center;
 }
 
 .iconos-redes-sociales {
   display: flex;
-  align-items: center;
-  gap: 15px; /* Espacio entre los iconos */
+  gap: 30px; /* Espacio entre los iconos de redes sociales */
 }
 
 .iconos-redes-sociales i {
   color: white;
-  font-size: 2rem; /* Tamaño de los iconos */
+  font-size: 2rem;
   transition: color 0.2s ease-in;
 }
 
 .iconos-redes-sociales a:hover i {
-  color: #ffcc00; /* Cambia el color del icono al pasar el ratón por encima */
+  color: #ffcc00;
 }
 
 .footer-texto {
-  font-size: 0.9rem; /* Tamaño del texto del copyright */
+  font-size: 0.9rem;
   text-align: center;
-  padding: 10px 0; /* Espacio alrededor del texto */
-  margin: 0; /* Elimina el margen adicional */
+  padding: 20px 0;
+  margin: 0;
 }
 
-/* Media queries para pantallas medianas (tablets) */
 @media (max-width: 768px) {
-  .footer-logo {
-    width: 200px;
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .map-container {
+    width: 100%;
+    max-width: 600px;
     height: 200px;
   }
 
-  .footer-texto {
-    font-size: 0.8rem; /* Ajusta el tamaño del texto en pantallas medianas */
+  .contact-info {
+    text-align: left;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    justify-content: center; /* Centra el logo en pantallas pequeñas */
+    margin-left: 0;
+  }
+
+  .footer-center {
+    justify-content: center;
+  }
+
+  .footer-right {
+    justify-content: center; /* Centra las redes sociales en pantallas pequeñas */
   }
 }
 
-/* Media queries para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
-  .footer-logo {
-    width: 150px;
+  .map-container {
     height: 150px;
   }
 
+  .footer-logo {
+    width: 100px;
+    margin-left: 0; /* Asegura que el logo esté centrado en pantallas pequeñas */
+  }
+
   .footer-texto {
-    font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas móviles */
+    font-size: 0.7rem;
+  }
+
+  .footer-center {
+    justify-content: center;
+  }
+
+  .footer-right {
+    justify-content: center;
   }
 }

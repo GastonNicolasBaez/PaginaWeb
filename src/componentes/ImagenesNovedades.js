@@ -33,8 +33,8 @@ function ImagenesNovedades({ text }) {
   }
 
   return (
-    <div className={styles.imageContainer} style={{ width: '100%', height: '15rem', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <img className={styles.cardImage} src={imageSrc} alt={text} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0' }}/>
+    <div className={styles.cardImgWrapper}>
+      <img className={styles.cardImgTop} src={imageSrc} alt={text} />
     </div>
   );
 }

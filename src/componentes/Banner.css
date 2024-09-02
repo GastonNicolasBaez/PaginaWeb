@@ -11,6 +11,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+.banner-subtitle {
+  color: white; /* Mismo color que el título */
+  font-size: 1rem; /* Ajusta el tamaño del subtítulo si es necesario */
+}
+
+/* Contenido del banner */
 .banner-content {
   display: flex;
   align-items: center;
@@ -31,6 +37,12 @@
   align-items: center;
   text-align: center;
 }
+.banner-title {
+  font-size: 2rem; /* Tamaño del título sin scroll */
+  transform: scale(1); /* Escala normal del título */
+  transition: transform 0.5s ease; /* Solo transiciona el tamaño de la escala */
+}
+
 
 .banner-title a {
   color: white; /* Color del texto blanco */
@@ -45,64 +57,54 @@
   padding-top: 200px; /* Ajusta el valor según la altura de tu banner */
 }
 
+.banner:not(.fixed) .banner-title {
+  font-size: 2rem; /* Tamaño más grande del título */
+}
+/* Ajustes cuando el banner está fijo */
 .banner.fixed {
-  position: fixed; /* Fija el banner en la parte superior */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  flex-direction: row; /* Cambia la dirección a fila */
-  justify-content: space-between; /* Espacia entre el logo y el contenido del banner */
-  padding: 10px 20px; /* Ajusta el padding cuando está fijo */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Sombra más intensa cuando el banner está fijo */
-}
-
-.banner.fixed .banner-text {
-  display: flex;
-  flex-direction: column; /* Mantiene el texto en columna cuando el banner está fijo */
-  align-items: center; /* Centra el texto horizontalmente */
+  padding: 5px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  flex-direction: row;
+  justify-content: space-between;
+  transition: none; /* Elimina la transición de la posición */
 }
 
 .banner.fixed .banner-logo {
-  height: 60px; /* Ajusta el tamaño del logo cuando el banner está fijo */
-  margin-left: auto; /* Alinea el logo a la derecha */
-}
-
-.banner-title {
-  color: white !important;
-  font-size: 2rem;
-  transition: all 0.5s ease;
-}
-
-.banner-subtitle {
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  height: 50px; /* Reduce el tamaño del logo */
+  margin-left: auto;
 }
 
 .banner.fixed .banner-title {
-  font-size: 1.5rem; /* Reduce el tamaño del título cuando el banner está fijo */
+  font-size: 1.2rem; /* Tamaño del título cuando se hace scroll */
+  transform: scale(.9); /* Escala reducida del título cuando se hace scroll */
 }
 
 .banner.fixed .banner-subtitle {
-  display: none; /* Oculta el subtítulo cuando está fijo */
+  display: none; /* Oculta el subtítulo */
 }
 
+/* Ajustes de los enlaces de navegación */
 .nav-links {
   display: flex;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: none;
 }
 
 .banner.fixed .nav-links {
-  justify-content: flex-end; /* Mueve los enlaces a la derecha cuando el banner está fijo */
+  justify-content: flex-end;
   margin-right: 20px;
 }
 
 .nav-links .nav-link, 
 .nav-links .dropdown-toggle {
-  margin: 0 15px;
+  margin: 0 10px; /* Reduce el margen entre los enlaces */
   color: white !important;
   text-decoration: none;
+  font-size: 14px; /* Reduce el tamaño de la fuente para más compactación */
 }
 
 .nav-links .nav-link:hover,

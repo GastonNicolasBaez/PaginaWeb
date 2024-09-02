@@ -40,10 +40,9 @@ function GroupExample() {
           <Card className="card">
             <ImagenesNovedades text="noticia-uno" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Noticias </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in
-                to additional content. This content is a little bit longer.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -55,10 +54,9 @@ function GroupExample() {
           <Card className="card">
             <ImagenesNovedades text="noticia-dos" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Noticias</Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -70,11 +68,9 @@ function GroupExample() {
           <Card className="card">
             <ImagenesNovedades text="noticia-tres" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Noticias</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in
-                to additional content. This card has even longer content than the
-                first to show that equal height action.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -86,13 +82,13 @@ function GroupExample() {
           <Card className="card">
             <ImagenesNovedades text="noticia-cuatro" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Noticias</Card.Title>
               <Card.Text>
-                This is another card with different content.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 5 mins ago</small>
+              <small className="text-muted">Actualizado hace 5 minutos</small>
             </Card.Footer>
           </Card>
         </div>
@@ -100,13 +96,13 @@ function GroupExample() {
           <Card className="card">
             <ImagenesNovedades text="noticia-cinco" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Noticias</Card.Title>
               <Card.Text>
-                Another card with additional supporting text.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 5 mins ago</small>
+              <small className="text-muted">Actualizado hace 5 minutos</small>
             </Card.Footer>
           </Card>
         </div>
@@ -114,9 +110,9 @@ function GroupExample() {
           <Card className="card">
             <ImagenesNovedades text="noticia-seis" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Noticias</Card.Title>
               <Card.Text>
-                This is the last card in the second row.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
           </Card>

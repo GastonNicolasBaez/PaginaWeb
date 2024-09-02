@@ -21,20 +21,23 @@
 }
 
 .image-container {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  border-radius: 50%; /* Hace la imagen circular */
 }
 
 .image-container img {
   width: 100%;
-  height: auto; /* Cambié a 'auto' para mantener la proporción de la imagen */
+  height: 100%; /* Cambia 'auto' a '100%' para asegurarte de que la imagen se ajuste al contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor completamente sin distorsión */
   border-radius: 50%; /* Hace la imagen circular */
 }
+
 
 @keyframes fadeIn {
   from {
@@ -64,16 +67,38 @@
   transition: opacity 0.4s ease-out;
 }
 
+.carousel-caption-below h3, .carousel-caption-below p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Añade una sombra suave al texto */
+}
+
+.carousel-caption-below {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px; /* Espacio interior del recuadro */
+  border: 2px solid #d4af37; /* Define el grosor y color del borde */
+  border-radius: 0px; /* Esquinas redondeadas para el recuadro */
+  display: inline-block; /* Hace que el recuadro se ajuste al contenido */
+  background-color: #c0c4d8; /* Añade un fondo blanco semitransparente */
+  position: relative; 
+  top: 85%; /* Ajusta este valor para posicionar el recuadro debajo de la imagen */
+  left: 50%; /* Centra el recuadro horizontalmente */
+  transform: translateX(-50%); /* Compensa el 50% de la posición izquierda */
+  text-align: center;
+}
+
 .carousel-caption-below h3 {
   margin: 10px 0 5px 0;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
+  color: #333;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .carousel-caption-below p {
   margin: 0;
-  font-size: 16px;
-  color: #666;
+  font-size: 18px;
+  color: #444;
   text-align: center;
+  font-weight: 600;
 }

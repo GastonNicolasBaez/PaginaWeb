@@ -1,52 +1,61 @@
+/* CardGroup.module.css */
 
-    .group-example .card {
-      width: 18rem; /* Ajusta el ancho de la tarjeta */
-      margin: auto; /* Centra la tarjeta dentro del contenedor */
-      background-color: #343a40; /* Ajusta el color de fondo de la tarjeta si es necesario */
-      opacity: 0; /* Ocultar inicialmente */
-      transition: opacity 0.5s ease-out; /* Transición suave de opacidad */
-      position: relative; /* Asegura que las tarjetas se comporten correctamente en la animación */
-    }
-    
-    .group-example .card.animate__animated.animate__fadeInUp {
-      opacity: 1; /* Mostrar cuando la animación esté activa */
-    }
-    
-    .group-example .card-img-top {
-      height: 12rem; /* Ajusta la altura de la imagen */
-      object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-      width: 100%; /* Asegura que las imágenes se ajusten al contenedor de la tarjeta */
-      border-radius: 0;
-    }
-    
-    .group-example .card-body {
-      padding: 1rem; /* Ajusta el padding interno del cuerpo de la tarjeta */
-    }
-    
-    .group-example .card-title {
-      font-size: 1.2rem; /* Ajusta el tamaño de la fuente del título */
-    }
-    
-    .group-example .card-text {
-      font-size: 0.9rem; /* Ajusta el tamaño de la fuente del texto */
-      padding: 0.5rem 0; /* Ajusta el padding del texto */
-    }
-    
-    .group-example .card:hover {
-      box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
-      transition: all 0.7s linear;
-    }
-    
-    .group-example .card-img-top {
-      transform: scale(1);
-      transition: all 0.2s ease-in-out;
-    }
-    
-    .group-example .card-img-top:hover {
-      transform: scale(1.8);
-    }
-    
-    .group-example .overflow {
-      overflow: hidden;
-    }
-    
+.groupExample {
+  background-color: #f8f9fa !important; /* Ajusta el fondo de todo el contenedor */
+  padding: 1rem; /* Opcional: Añade padding si deseas espacio alrededor de las tarjetas */
+}
+
+.card {
+  width: 18rem; /* Ajusta según sea necesario */
+  margin: auto; /* Centra la tarjeta dentro del contenedor */
+  background-color: #343a40; /* Ajusta el color de fondo de la tarjeta si es necesario */
+  opacity: 0; /* Ocultar inicialmente */
+  transition: opacity 0.5s ease-out; /* Transición suave de opacidad */
+  position: relative; /* Asegura que las tarjetas se comporten correctamente en la animación */
+  overflow: hidden; /* Asegura que el contenido se ajuste al contenedor */
+}
+
+.card.animate__animated.animate__fadeInUp {
+  opacity: 1; /* Mostrar cuando la animación esté activa */
+}
+
+.cardImgWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Proporción 16:9 para una relación de aspecto más común */
+}
+
+.cardImgTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la proporción de la imagen sin cortarla */
+  object-position: center; /* Ajusta la posición de la imagen */
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardImgTop:hover {
+  transform: scale(1.05); /* Ajusta el tamaño de la imagen al hacer hover */
+}
+
+.cardBody {
+  padding: 1rem; /* Ajusta el padding interno del cuerpo de la tarjeta */
+}
+
+.cardTitle {
+  font-size: 1.2rem; /* Ajusta el tamaño de la fuente del título */
+  color: #fff; /* Ajusta el color del texto según sea necesario */
+}
+
+.cardText {
+  font-size: 0.9rem; /* Ajusta el tamaño de la fuente del texto */
+  padding: 0.5rem 0; /* Ajusta el padding del texto */
+  color: #fff; /* Ajusta el color del texto según sea necesario */
+}
+
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+  transition: all 0.7s linear;
+}

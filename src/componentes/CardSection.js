@@ -1,11 +1,14 @@
 import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import './CardSection.css';
+import styles from './CardSection.module.css'; // Importa el archivo CSS módulo
 
 import image1 from '../assets/images/pildora.jpg';
 import image2 from '../assets/images/Ambulancia.jpg';
 import image3 from '../assets/images/PC.jpg';
-import image4 from '../assets/images/hospital.jpg';
+import image4 from '../assets/images/Diente.jpg';
+import image5 from '../assets/images/Proveta.jpg';
+import image6 from '../assets/images/Curitas.jpg';
+
 
 const CardSection = () => {
   return (
@@ -40,7 +43,7 @@ const CardSection = () => {
         </Col>
         <Col md={4} className="mb-4">
           <Card className="border-light text-center">
-            <Card.Img variant="top" src={image4} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
+            <Card.Img variant="top" src={image3} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
             <Card.Body>
               <Card.Title>Imágenes</Card.Title>
               <Card.Subtitle className="mb-2 text-muted phone-number">11-35916649</Card.Subtitle>
@@ -64,7 +67,7 @@ const CardSection = () => {
         </Col>
         <Col md={4} className="mb-4">
           <Card className="border-light text-center">
-            <Card.Img variant="top" src={image4} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
+            <Card.Img variant="top" src={image5} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
             <Card.Body>
               <Card.Title>Laboratorio</Card.Title>
               <Card.Subtitle className="mb-2 text-muted phone-number">2932465959</Card.Subtitle>
@@ -76,7 +79,7 @@ const CardSection = () => {
         </Col>
         <Col md={4} className="mb-4">
           <Card className="border-light text-center">
-            <Card.Img variant="top" src={image4} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
+            <Card.Img variant="top" src={image6} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
             <Card.Body>
               <Card.Title>Kinesiología</Card.Title>
               <Card.Subtitle className="mb-2 text-muted phone-number">291-5713249</Card.Subtitle>

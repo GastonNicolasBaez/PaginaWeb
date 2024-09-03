@@ -181,7 +181,7 @@ body-fixed-banner main {
 }
 
 .contact-info {
-  text-align: left; /* Alinea el texto a la izquierda */
+  text-align: center; /* Alinea el texto a la izquierda */
   font-size: 0.9rem; /* Tamaño del texto de contacto */
 }
 

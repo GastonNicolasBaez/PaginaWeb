@@ -12,7 +12,7 @@ function CarouselAutoridades() {
     setTimeout(() => {
       setSlideIndex(selectedIndex);
       setCaptionClass('fade-in');
-    }, 400); // Duración de la animación de salida
+    }, 200); // Duración de la animación de salida
   };
 
   return (

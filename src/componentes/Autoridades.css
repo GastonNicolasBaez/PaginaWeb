@@ -28,15 +28,19 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  border-radius: 50%; /* Hace la imagen circular */
+  border-radius: 50%;
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.273); /* Aplica el box-shadow directamente */
 }
 
 .image-container img {
   width: 100%;
-  height: 100%; /* Cambia 'auto' a '100%' para asegurarte de que la imagen se ajuste al contenedor */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor completamente sin distorsión */
-  border-radius: 50%; /* Hace la imagen circular */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out; /* Solo aplica transiciones a opacidad y transformación */
+  box-shadow: none; /* Asegúrate de que la imagen no tenga sombra propia */
 }
+
 
 
 @keyframes fadeIn {

@@ -9,89 +9,81 @@ import image4 from '../assets/images/Diente.jpg';
 import image5 from '../assets/images/Proveta.jpg';
 import image6 from '../assets/images/Curitas.jpg';
 
+const cardsData = [
+  {
+    image: image1,
+    title: 'Turnos',
+    phone: '2932-520066',
+    description: 'Consulta nuestra línea de turnos para mayor información.'
+  },
+  {
+    image: image2,
+    title: 'Guardias Médicas',
+    phone: null, // No hay número principal, se listan varios
+    description: (
+      <ul className={styles.cardSectionGuardiasList}>
+        <li className={styles.cardSectionGuardiasListItem}>Medicina General: 1234-567890</li>
+        <li className={styles.cardSectionGuardiasListItem}>Pediatría: 2345-678901</li>
+        <li className={styles.cardSectionGuardiasListItem}>Asistencia a la Familia: 3456-789012</li>
+      </ul>
+    )
+  },
+  {
+    image: image3,
+    title: 'Imágenes',
+    phone: '11-35916649',
+    description: 'Contamos con tecnología avanzada para la realización de estudios de imágenes.'
+  },
+  {
+    image: image4,
+    title: 'Odontología',
+    phone: '291-4497703',
+    description: 'Servicios odontológicos de calidad para toda la familia.'
+  },
+  {
+    image: image5,
+    title: 'Laboratorio',
+    phone: '2932-465959',
+    description: 'Realizamos análisis clínicos con resultados precisos y rápidos.'
+  },
+  {
+    image: image6,
+    title: 'Kinesiología',
+    phone: '291-5713249',
+    description: 'Ofrecemos tratamientos de kinesiología para la rehabilitación y recuperación de lesiones.'
+  }
+];
 
 const CardSection = () => {
   return (
     <Container>
       <Row className="my-4">
-        <Col md={4} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image1} alt="Image 1" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
-            <Card.Body>
-              <Card.Title>Turnos</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted phone-number">2932-520066</Card.Subtitle>
-              <Card.Text>
-                <p>Consulta nuestra línea de turnos para mayor información.</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image2} alt="Image 2" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
-            <Card.Body>
-              <Card.Title>Guardias Médicas</Card.Title>
-              <Card.Text>
-                <ul className="guardias-list">
-                  <li>Medicina General: 1234-567890</li>
-                  <li>Pediatría: 2345-678901</li>
-                  <li>Asistencia a la Familia: 3456-789012</li>
-                </ul>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image3} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
-            <Card.Body>
-              <Card.Title>Imágenes</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted phone-number">11-35916649</Card.Subtitle>
-              <Card.Text>
-                Contamos con tecnología avanzada para la realización de estudios de imágenes. Nuestro equipo está capacitado para ofrecer diagnósticos precisos y rápidos.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image4} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
-            <Card.Body>
-              <Card.Title>Odontología</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted phone-number">291-4497703</Card.Subtitle>
-              <Card.Text>
-                Servicios odontológicos de calidad para toda la familia.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image5} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
-            <Card.Body>
-              <Card.Title>Laboratorio</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted phone-number">2932465959</Card.Subtitle>
-              <Card.Text>
-                Realizamos análisis clínicos con resultados precisos y rápidos.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4} className="mb-4">
-          <Card className="border-light text-center">
-            <Card.Img variant="top" src={image6} alt="Image 4" className="rounded-circle img-thumbnail shadow-sm mx-auto d-block" />
-            <Card.Body>
-              <Card.Title>Kinesiología</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted phone-number">291-5713249</Card.Subtitle>
-              <Card.Text>
-                Ofrecemos tratamientos de kinesiología para la rehabilitación y recuperación de lesiones. Nuestro equipo está preparado para brindar un servicio personalizado y efectivo.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+        {cardsData.map((card, index) => (
+          <Col md={4} className="mb-4" key={index}>
+            <Card className={`${styles.cardSectionCard} border-light text-center`}>
+              <Card.Img
+                variant="top"
+                src={card.image}
+                alt={`Image ${index + 1}`}
+                className={`${styles.cardSectionImg} rounded-circle img-thumbnail mx-auto d-block`}
+              />
+              <Card.Body className={styles.cardSectionBody}>
+                <Card.Title className={styles.cardSectionTitle}>{card.title}</Card.Title>
+                {card.phone && (
+                  <Card.Subtitle className={`${styles.cardSectionSubtitle} mb-2 text-muted phone-number`}>
+                    {card.phone}
+                  </Card.Subtitle>
+                )}
+                <Card.Text className={styles.cardSectionText}>
+                  {card.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
-};
+}
 
 export default CardSection;

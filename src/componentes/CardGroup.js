@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Card from 'react-bootstrap/Card';
 import ImagenesNovedades from './ImagenesNovedades';
-import 'animate.css'; // Importa animate.css para las animaciones
 import './CardGroup.module.css'; // Asegúrate de importar el archivo CSS módulo
 
 function GroupExample() {
@@ -22,7 +21,7 @@ function GroupExample() {
       }
     );
 
-    const cards = cardSectionRef.current.querySelectorAll('.card');
+    const cards = cardSectionRef.current.querySelectorAll('.cardGroupCard');
     cards.forEach(card => observer.observe(card));
 
     return () => {
@@ -34,15 +33,15 @@ function GroupExample() {
   }, []);
 
   return (
-    <div className="container group-example" ref={cardSectionRef}>
+    <div className="container cardGroupContainer" ref={cardSectionRef}>
       <div className="row">
         <div className="col-md-4">
-          <Card className="card">
+          <Card className="cardGroupCard">
             <ImagenesNovedades text="noticia-uno" />
-            <Card.Body>
-              <Card.Title>Noticias </Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            <Card.Body className="cardGroupBody">
+              <Card.Title className="cardGroupTitle">Noticias</Card.Title>
+              <Card.Text className="cardGroupText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -51,12 +50,12 @@ function GroupExample() {
           </Card>
         </div>
         <div className="col-md-4">
-          <Card className="card">
+          <Card className="cardGroupCard">
             <ImagenesNovedades text="noticia-dos" />
-            <Card.Body>
-              <Card.Title>Noticias</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            <Card.Body className="cardGroupBody">
+              <Card.Title className="cardGroupTitle">Noticias</Card.Title>
+              <Card.Text className="cardGroupText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -65,12 +64,12 @@ function GroupExample() {
           </Card>
         </div>
         <div className="col-md-4">
-          <Card className="card">
+          <Card className="cardGroupCard">
             <ImagenesNovedades text="noticia-tres" />
-            <Card.Body>
-              <Card.Title>Noticias</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            <Card.Body className="cardGroupBody">
+              <Card.Title className="cardGroupTitle">Noticias</Card.Title>
+              <Card.Text className="cardGroupText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -79,12 +78,12 @@ function GroupExample() {
 
       <div className="row mt-3">
         <div className="col-md-4">
-          <Card className="card">
+          <Card className="cardGroupCard">
             <ImagenesNovedades text="noticia-cuatro" />
-            <Card.Body>
-              <Card.Title>Noticias</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            <Card.Body className="cardGroupBody">
+              <Card.Title className="cardGroupTitle">Noticias</Card.Title>
+              <Card.Text className="cardGroupText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -93,12 +92,12 @@ function GroupExample() {
           </Card>
         </div>
         <div className="col-md-4">
-          <Card className="card">
+          <Card className="cardGroupCard">
             <ImagenesNovedades text="noticia-cinco" />
-            <Card.Body>
-              <Card.Title>Noticias</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            <Card.Body className="cardGroupBody">
+              <Card.Title className="cardGroupTitle">Noticias</Card.Title>
+              <Card.Text className="cardGroupText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -107,12 +106,12 @@ function GroupExample() {
           </Card>
         </div>
         <div className="col-md-4">
-          <Card className="card">
+          <Card className="cardGroupCard">
             <ImagenesNovedades text="noticia-seis" />
-            <Card.Body>
-              <Card.Title>Noticias</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            <Card.Body className="cardGroupBody">
+              <Card.Title className="cardGroupTitle">Noticias</Card.Title>
+              <Card.Text className="cardGroupText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
               </Card.Text>
             </Card.Body>
           </Card>

@@ -68,21 +68,20 @@ const Banner = () => {
               <NavDropdown.Item href="#service4">Trabaja en el Hospital</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Pacientes" id="patients-dropdown">
-              <NavDropdown.Item href="#service1">Turnos Web</NavDropdown.Item>
-              <NavDropdown.Item href="#service2">Resultados de Laboratorio</NavDropdown.Item>
-              <NavDropdown.Item href="#service4">Informes Rayos</NavDropdown.Item>
+              <NavDropdown.Item href="http://www.hnpb.ara.mil.ar/Initurnos.aspx">Turnos Web</NavDropdown.Item>
+              <NavDropdown.Item href="http://www.hnpb.ara.mil.ar:8080/web-patient/login">Resultados de Laboratorio</NavDropdown.Item>
+              <NavDropdown.Item href="http://www.hnpbvpn2.duckdns.org:81/">Informes Rayos</NavDropdown.Item>
               <NavDropdown.Item href="#service5">Historia Clinica</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Profesionales" id="doctors-dropdown">
-              <NavDropdown.Item href="#service1">RX Profesionales</NavDropdown.Item>
-              <NavDropdown.Item href="#service2">Control de Gestion</NavDropdown.Item>
+              <NavDropdown.Item href="http://www.hnpbvpn2.duckdns.org:8081/pesquisa/#/login">RX Profesionales</NavDropdown.Item>
+              <NavDropdown.Item href="http://www.hnpb.ara.mil.ar/IniGestion.aspx">Control de Gestion</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#telefonos-utiles">Telefonos Utiles</Nav.Link>
-             <Nav.Link href="#faq" onClick={(e) => handleScroll(e, 'faq')}>
+            <Nav.Link href="#faq" onClick={(e) => handleScroll(e, 'faq')}>
               FAQ
             </Nav.Link>
             <Nav.Link href="#footer">Contacto</Nav.Link>
-           
           </Nav>
         </Navbar.Collapse>
       </Navbar>

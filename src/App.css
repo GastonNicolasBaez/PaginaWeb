@@ -22,7 +22,7 @@ html, body {
 
 /* Estilos para el carrusel */
 .carousel-item img {
-  height: 485px; /* Ajusta la altura de las imágenes del carrusel */
+  height: 560px; /* Ajusta la altura de las imágenes del carrusel */
 }
 
 /* Asegura que el contenedor principal ocupe al menos la altura de la ventana */

@@ -70,7 +70,7 @@ const CardSection = () => {
               <Card.Body className={styles.cardSectionBody}>
                 <Card.Title className={styles.cardSectionTitle}>{card.title}</Card.Title>
                 {card.phone && (
-                  <Card.Subtitle className={`${styles.cardSectionSubtitle} mb-2 text-muted phone-number`}>
+                  <Card.Subtitle className={`${styles.cardSectionSubtitle} mb-2 text-muted phone-number`} style={{ fontSize: '1rem' }}>
                     {card.phone}
                   </Card.Subtitle>
                 )}
